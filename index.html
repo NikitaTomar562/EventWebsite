@@ -88,22 +88,92 @@
       font-weight: 600;
     }
 
-    .prizes {
-      margin-top: 20px;
-      text-align: center;
-      background: rgba(255,255,255,0.05);
-      padding: 20px;
+    .last-date {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #ff6b6b;
+    }
+
+    .event-guidelines {
+      padding: 50px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      max-width: 900px;
+      margin: 50px auto;
       border-radius: 10px;
     }
 
-    .prizes h3 {
+    .event-guidelines h2 {
+      text-align: center;
+      color: #00e0ff;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .event-guidelines .guideline {
+      margin-bottom: 25px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.15);
+    }
+
+    .event-guidelines h3 {
       color: #00ffcc;
       margin-bottom: 10px;
     }
 
-    .prizes p {
-      font-size: 1.1rem;
-      margin: 5px 0;
+    .event-guidelines ul {
+      list-style: disc inside;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    .event-guidelines ul ul {
+      list-style: circle inside;
+      margin-top: 5px;
+    }
+
+    /* Single Prize Image Section */
+    .prizes-section {
+      padding: 50px 20px;
+      background: rgba(255,255,255,0.05);
+      text-align: center;
+      margin: 50px auto;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+
+    .prizes-section h2 {
+      color: #00e0ff;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .prizes-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .prize-box {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 10px;
+      width: 100%;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+      text-align: center;
+    }
+
+    .prize-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .prize-box p {
+      font-weight: 600;
+      color: #00ffcc;
     }
 
     .problem-section {
@@ -192,6 +262,12 @@
       margin-bottom: 10px;
     }
 
+    .faq-item p {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
     .contact {
       padding: 60px 20px;
       text-align: center;
@@ -240,7 +316,7 @@
     @media (max-width: 768px) {
       header h1 { font-size: 2.3rem; }
       .header-logos img { height: 50px; }
-      .qr-section, .contact-section { flex-direction: column; }
+      .qr-section, .contact-section, .prizes-container { flex-direction: column; }
     }
   </style>
 </head>
@@ -263,12 +339,68 @@
     </p>
     <p class="date">📅 31st October 2025</p>
     <p class="venue">📍 Venue: Block D8, Main Campus, Ground Floor</p>
+    <p class="last-date">📝 Last Date for Registration: 20th Oct 2025</p>
+  </section>
 
-    <div class="prizes">
-      <h3>🏆 Winner Prizes</h3>
-      <p><strong>1st Prize:</strong> ₹10,000</p>
-      <p><strong>2nd Prize:</strong> ₹5,000</p>
-      <p><strong>3rd Prize:</strong> ₹3,000</p>
+  <section class="event-guidelines">
+    <h2>Event Guidelines, Venue & Duration</h2>
+
+    <div class="guideline">
+      <h3>1. Eligibility</h3>
+      <ul>
+        <li>The competition is open to students/participants from [college/university].</li>
+        <li>Both individual and team participation are allowed. (Team size: 2–4 members)</li>
+      </ul>
+    </div>
+
+    <div class="guideline">
+      <h3>2. Registration</h3>
+      <ul>
+        <li>All teams must register before the deadline.</li>
+        <li>Registration Fee is Rs. 200 for each team.</li>
+      </ul>
+    </div>
+
+    <div class="guideline">
+      <h3>3. Prototype Guidelines</h3>
+      <ul>
+        <li>Prototypes can be hardware, software, or a combination of both.</li>
+        <li>Students can bring their own partial or full-fledged prototypes.</li>
+        <li>Two hours will be given to design or arrange your models.</li>
+      </ul>
+    </div>
+
+    <div class="guideline">
+      <h3>4. Presentation & Evaluation</h3>
+      <ul>
+        <li>Each team will get 5–10 minutes to present their project, followed by Q&A.</li>
+        <li>Evaluation will be based on:
+          <ul>
+            <li>Innovation & Creativity (25%)</li>
+            <li>Technical Implementation (25%)</li>
+            <li>Practicality & Impact (25%)</li>
+            <li>Presentation & Communication (25%)</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="guideline">
+      <h3>5. Awards & Recognition</h3>
+      <ul>
+        <li>Prizes will be awarded to the top-performing teams.</li>
+        <li>Certificates of participation will be given to all registered participants.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="prizes-section">
+    <h2>🏆 Winner Prizes</h2>
+    <div class="prizes-container">
+      <div class="prize-box">
+        <img src="Event/Prize.png" alt="Winner Prizes" />
+        <p>Exciting prizes for top teams!</p>
+      </div>
     </div>
   </section>
 
@@ -315,7 +447,7 @@
     </div>
     <div class="faq-item">
       <h3>Is there any registration fee?</h3>
-      <p>No, participation is completely free.</p>
+      <p>Yes, Rs. 200 per team.</p>
     </div>
     <div class="faq-item">
       <h3>Do participants get certificates?</h3>
@@ -325,6 +457,14 @@
       <h3>How to register?</h3>
       <p>Scan the registration QR code above and fill in your details in the provided form.</p>
     </div>
+    <div class="faq-item">
+      <h3>Is any components will be provided from Chandigarh University?</h3>
+      <p>No components will be arranged by Chandigarh University; teams must bring their own.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What will be the last date of registration?</h3>
+      <p>20th Oct 2025 will be the last date for registration.</p>
+    </div>
   </section>
 
   <section class="contact">
@@ -332,13 +472,15 @@
     <div class="contact-section">
       <div class="contact-box">
         <h3>Student Coordinators</h3>
-        <p>Rahul Sharma – +91 98765 43210</p>
-        <p>Anjali Mehta – +91 98765 67890</p>
+        <p>Nikita Tomar – +91 9045258477</p>
+        <p>Vaibhav Bhardwaj – +91 8954433005</p>
+        <p>UIC Department</p>
       </div>
       <div class="contact-box">
         <h3>Faculty Coordinators</h3>
-        <p>Dr. Neha Gupta – neha.gupta@cuchd.in</p>
-        <p>Prof. Arjun Singh – arjun.singh@cuchd.in</p>
+        <p>Mr. Sachin Chawla  Assistant Professor</p>
+        <p>Ms. Shuchi Sharma  Assistant Professor</p>
+        <p>UIC Department</p>
       </div>
     </div>
   </section>
@@ -348,3 +490,4 @@
   </footer>
 </body>
 </html>
+
